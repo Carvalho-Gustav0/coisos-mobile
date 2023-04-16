@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="indigo_700">#303f9f</color>
+    <color name="purple_900">#4A148C</color>
+    <color name="purple_600">#5E35B1</color>
+    <color name="purple_500">#673AB7</color>
+    <color name="purple_100">#D1C4E9</color>
+
+    <color name="purple_dark">#220951</color>
+    <color name="purple_dark_transparent">#1D220951</color>
+
+    <color name="indigo_900">#311B92</color>
     <color name="indigo_800">#283593</color>
-    <color name="indigo_900">#1a237e</color>
 
-    <color name="purple_700">#7b1fa2</color>
-    <color name="purple_800">#6a1b9a</color>
-    <color name="purple_900">#4a148c</color>
+    <color name="pink_900">#880E4F</color>
+    <color name="pink_800">#AD1457</color>
+    <color name="pink_600">#D81B60</color>
 
-    <color name="gray_300">#e0e0e0</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_800">#424242</color>
+    <color name="gray_900">#212121</color>
 
+    <color name="black">#000</color>
     <color name="white">#fff</color>
 </resources>
