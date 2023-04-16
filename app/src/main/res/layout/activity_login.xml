@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edit_text_identifier"
+        android:id="@+id/edit_text_identifier_login"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginStart="8dp"
@@ -31,13 +31,13 @@
         android:hint="@string/input_identifier"
         android:inputType="text"
         android:padding="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/edit_text_password"
+        app:layout_constraintBottom_toTopOf="@+id/edit_text_password_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_app_name" />
 
     <EditText
-        android:id="@+id/edit_text_password"
+        android:id="@+id/edit_text_password_login"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginStart="8dp"
@@ -50,7 +50,7 @@
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_identifier" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_identifier_login" />
 
     <Button
         android:id="@+id/button_login"

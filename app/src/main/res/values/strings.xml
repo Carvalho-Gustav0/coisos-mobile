@@ -10,10 +10,14 @@
     <string name="menu_home">Home</string>
     <string name="menu_file_rpg">File Rpg</string>
     <string name="menu_account">Account</string>
-    <string name="input_user_name">Type your name</string>
+
+    <string name="input_username">Type your name</string>
     <string name="input_identifier">Type your identifier</string>
     <string name="input_password">Type your password</string>
+
     <string name="login">Login</string>
+    <string name="register">Register</string>
 
     <string name="don_t_have_account">Don\'t have account? <b>Register</b></string>
+    <string name="have_account">Already have account? <b>Login</b></string>
 </resources>
