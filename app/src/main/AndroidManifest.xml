@@ -13,7 +13,11 @@
         android:theme="@style/Theme.Coisos"
         tools:targetApi="31">
         <activity
-            android:name=".view.MainActivity"
+            android:name=".login.view.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Coisos.NoActionBar"/>
+        <activity
+            android:name=".login.view.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.Coisos.NoActionBar">
             <intent-filter>
@@ -22,6 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Coisos.NoActionBar" />
     </application>
 
 </manifest>
