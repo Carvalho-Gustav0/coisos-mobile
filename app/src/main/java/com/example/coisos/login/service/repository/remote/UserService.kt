@@ -3,7 +3,6 @@ package com.example.coisos.login.service.repository.remote
 import com.example.coisos.login.service.model.UserModel
 import retrofit2.Call
 import retrofit2.http.Body
-import retrofit2.http.Field
 import retrofit2.http.POST
 
 interface UserService {
@@ -15,8 +14,6 @@ interface UserService {
 
     @POST("users/register")
     fun userRegister(
-        @Field("name") name: String,
-        @Field("identifier") identifier: String,
-        @Field("password") password: String
+        @Body requestBody: UserModel
     ): Call<UserModel>
 }

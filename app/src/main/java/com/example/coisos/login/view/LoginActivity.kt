@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.coisos.databinding.ActivityLoginBinding
 import com.example.coisos.login.viewmodel.LoginViewModel
+import com.example.coisos.view.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -53,6 +54,12 @@ class LoginActivity : AppCompatActivity() {
     private fun observe() {
         loginViewModel.messageLogin.observe(this) {
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+        }
+
+        loginViewModel.isLogged.observe(this) {
+            if (it) {
+                MainActivity.startMainActivity(this)
+            }
         }
     }
 }
