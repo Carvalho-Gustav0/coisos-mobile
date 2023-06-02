@@ -22,4 +22,5 @@
     <string name="have_account">Already have account? <b>Login</b></string>
     <string name="welcome_back">Welcome back to <b>Coisos</b></string>
     <string name="welcome">Welcome to <b>Coisos</b></string>
+    <string name="button_loggout">Button loggout</string>
 </resources>
