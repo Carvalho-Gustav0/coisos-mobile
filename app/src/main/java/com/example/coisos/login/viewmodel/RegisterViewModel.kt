@@ -16,12 +16,13 @@ class RegisterViewModel : ViewModel() {
 
     private val userRepository = UserRepository()
 
-    fun doRegister(name: String, identifier: String, password: String) {
+    fun doRegister(name: String, cpf: String, email: String, password: String) {
+
         userRepository.register(
-            UserModel(name = name, identifier = identifier, password = password),
+            UserModel(name = name, cpf = cpf, email = email, password = password),
             object : ApiListener<UserModel> {
                 override fun onSuccess(result: UserModel) {
-                    _messageRegister.value = result.message
+                    _messageRegister.value = "User created"
                     _isRegistered.value = true
                 }
 

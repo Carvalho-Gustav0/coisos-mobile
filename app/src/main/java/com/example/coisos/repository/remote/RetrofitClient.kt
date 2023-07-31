@@ -1,5 +1,4 @@
-package com.example.coisos.login.service.repository.remote
-
+package com.example.coisos.repository.remote
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -17,7 +16,7 @@ class RetrofitClient {
             if (!::INSTANCE.isInitialized) {
                 synchronized(RetrofitClient::class.java) {
                     INSTANCE = Retrofit.Builder()
-                        .baseUrl("http://10.0.2.2:3333/")
+                        .baseUrl("http://10.0.2.2:3000/")
                         .client(httpClient.build())
                         .addConverterFactory(GsonConverterFactory.create())
                         .build()

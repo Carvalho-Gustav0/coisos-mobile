@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.coisos.databinding.ActivityRegisterBinding
 import com.example.coisos.login.viewmodel.RegisterViewModel
-import com.example.coisos.view.MainActivity
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -18,6 +17,7 @@ class RegisterActivity : AppCompatActivity() {
     companion object {
         fun startRegisterActivity(context: Context) {
             val intent = Intent(context, RegisterActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             context.startActivity(intent)
         }
     }
@@ -47,20 +47,21 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun handleLogin() {
         val name = binding.editTextUsernameRegister.text.toString()
-        val identifier = binding.editTextIdentifierRegister.text.toString()
+        val cpf = binding.editTextCpf.text.toString()
+        val email = binding.editTextEmailRegister.text.toString()
         val password = binding.editTextPasswordRegister.text.toString()
 
-        registerViewModel.doRegister(name, identifier, password)
+        registerViewModel.doRegister(name, cpf, email, password)
     }
 
     private fun observe() {
         registerViewModel.messageRegister.observe(this) {
-            Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, it, Toast.LENGTH_LONG).show()
         }
 
         registerViewModel.isRegistered.observe(this) {
             if (it) {
-                MainActivity.startMainActivity(this)
+                LoginActivity.startLoginActivity(this)
             }
         }
     }

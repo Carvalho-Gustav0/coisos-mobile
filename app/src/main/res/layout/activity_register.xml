@@ -26,7 +26,7 @@
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="16dp"
         android:autofillHints="text"
         android:hint="@string/input_username"
@@ -37,20 +37,35 @@
         app:layout_constraintTop_toBottomOf="@+id/text_view_register" />
 
     <EditText
-        android:id="@+id/edit_text_identifier_register"
+        android:id="@+id/edit_text_cpf"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="text"
+        android:hint="@string/input_cpf"
+        android:inputType="number"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_username_register" />
+
+    <EditText
+        android:id="@+id/edit_text_email_register"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:autofillHints="text"
-        android:hint="@string/input_identifier"
-        android:inputType="text"
+        android:hint="@string/input_email"
+        android:inputType="textEmailAddress"
         android:padding="12dp"
         app:layout_constraintBottom_toTopOf="@+id/edit_text_password_register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_username_register" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_cpf" />
 
     <EditText
         android:id="@+id/edit_text_password_register"
@@ -65,7 +80,7 @@
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_identifier_register" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_email_register" />
 
     <Button
         android:id="@+id/button_register"

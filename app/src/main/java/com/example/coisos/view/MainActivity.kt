@@ -12,6 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.coisos.R
 import com.example.coisos.databinding.ActivityMainBinding
+import com.example.coisos.login.view.LoginActivity
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
         fun startMainActivity(context: Context) {
             val intent = Intent(context, MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK and Intent.FLAG_ACTIVITY_CLEAR_TOP
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             context.startActivity(intent)
         }
     }
@@ -41,12 +42,30 @@ class MainActivity : AppCompatActivity() {
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home, R.id.nav_file_rpg, R.id.nav_account
             ), drawerLayout
         )
 
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        navView.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.nav_logout -> {
+                    logout()
+                    true
+                }
+
+                else -> {
+                    false
+                }
+            }
+        }
+    }
+
+    private fun logout() {
+        LoginActivity.startLoginActivity(this)
+        finish()
     }
 
     override fun onSupportNavigateUp(): Boolean {

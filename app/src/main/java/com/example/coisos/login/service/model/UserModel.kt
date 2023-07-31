@@ -1,9 +1,10 @@
 package com.example.coisos.login.service.model
 
 class UserModel(
-    var message: String = "",
-    var id: String = "",
+    var id_user: String = "",
+    var user_token: String = "",
     var name: String = "",
-    var identifier: String = "",
+    var cpf: String = "",
+    var email: String = "",
     var password: String = ""
 )

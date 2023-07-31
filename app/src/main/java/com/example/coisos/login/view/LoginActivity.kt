@@ -18,6 +18,7 @@ class LoginActivity : AppCompatActivity() {
     companion object {
         fun startLoginActivity(context: Context) {
             val intent = Intent(context, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             context.startActivity(intent)
         }
     }
@@ -45,10 +46,10 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun handleLogin() {
-        val identifier = binding.editTextIdentifierLogin.text.toString()
+        val email = binding.editTextEmailLogin.text.toString()
         val password = binding.editTextPasswordLogin.text.toString()
 
-        loginViewModel.doLogin(identifier, password)
+        loginViewModel.doLogin(email, password)
     }
 
     private fun observe() {
